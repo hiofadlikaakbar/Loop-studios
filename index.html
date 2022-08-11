@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Mission 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              white: "hsl(0, 0%, 100%)",
+              black: "hsl(0, 0%, 0%)",
+              dGray: "hsl(0, 0%, 55%)",
+              vdGray: "hsl(0, 0%, 41%)",
+            },
+            fontFamily: {
+              alata: ["Alata"],
+              jo: ["Josefin Sans"],
+            },
+          },
+        },
+      };
+    </script>
+
+  </head>
+  <body class="text-[0.938rem]">
+    <!-- header -->
+    <header>
+      <img
+        src="./images/desktop/image-hero.jpg"
+        alt="hero image"
+        class="w-full brightness-50 absolute bg-cover bg-no-repeat object-cover bg-center top-0 h-[37.5rem] md:object-fill"
+      />
+      <nav class="relative container mx-auto p-6">
+        <div class="flex item-center justify-between">
+          <div class="pt-2 m-0 md:m-4">
+            <img src="./images/logo.svg" alt="" />
+          </div>
+          <div
+            class="lg:flex text-white font-jo font-semibold hidden space-x-12 m-0 md:m-4"
+          >
+            <a href="#" class="py-1 hover:transform hover:-translate-y-2 transition ease-in duration-150">About</a>
+            <a href="#" class="py-1 hover:transform hover:-translate-y-2 transition ease-in duration-150">Carrers</a>
+            <a href="#" class="py-1 hover:transform hover:-translate-y-2 transition ease-in duration-150">Events</a>
+            <a href="#" class="py-1 hover:transform hover:-translate-y-2 transition ease-in duration-150">Products</a>
+            <a href="#" class="py-1 hover:transform hover:-translate-y-2 transition ease-in duration-150">Support</a>
+          </div>
+          <button id="burger" class="block lg:hidden focus:outline-none">
+            <img
+              src="./images/icon-hamburger.svg"
+              alt=""
+              class="absolute right-6 top-10"
+            />
+          </button>
+
+          <!-- mobile menu -->
+          <div class="lg:hidden">
+            <div
+              id="menu"
+              class="fixed h-screen z-50 hidden flex-col item-center self-end py-8 space-y-6 left-0 right-6 bg-black text-white sm:self-center top-0 w-full"
+            >
+              <div class="pt-2 ml-4 md:m-4 flex justify-between mb-32">
+                <img
+                  src="./images/logo.svg"
+                  alt=""
+                  class="absolute top-8 left-6"
+                />
+                <div>
+                  <button id="close">
+                    <img
+                      src="./images/icon-close.svg"
+                      alt=""
+                      class="absolute right-6 w-6 top-10"
+                    />
+                  </button>
+                </div>
+              </div>
+
+              <a href="#" class="text-4xl font-medium font-jo ml-5 uppercase"
+                >About</a
+              >
+              <a href="#" class="text-4xl font-medium font-jo ml-5 uppercase"
+                >Carrers</a
+              >
+              <a href="#" class="text-4xl font-medium font-jo ml-5 uppercase"
+                >Events</a
+              >
+              <a href="#" class="text-4xl font-medium font-jo ml-5 uppercase"
+                >Products</a
+              >
+              <a href="#" class="text-4xl font-medium font-jo ml-5 uppercase"
+                >Support</a
+              >
+            </div>
+          </div>
+        </div>
+        <!-- jumbotron -->
+        <div
+          class="border-[1px] flex px-6 py-7 w-full md:w-fit lg:w-[50%] flex-col justify-center mt-36"
+        >
+          <p class="text-4xl md:text-6xl text-white font-jo font-medium">
+            IMMERSIVE
+          </p>
+          <p class="text-4xl md:text-6xl text-white font-jo font-medium">
+            EXPERIENCES
+          </p>
+          <p class="text-4xl md:text-6xl text-white font-jo font-medium">
+            THAT DELIVER
+          </p>
+        </div>
+      </nav>
+    </header>
+
+    <!-- about -->
+    <section id="about" class="pt-60 px-7 pb-44">
+      <div class="container relative mx-auto flex flex-wrap justify-start">
+        <div>
+          <img
+            src="./images/desktop/image-interactive.jpg"
+            alt=""
+            class="w-full"
+          />
+        </div>
+        <div
+          class="bg-white right-0 static lg:absolute pb-8 px-8 bottom-0 w-auto"
+        >
+          <h2
+            class="font-jo text-3xl lg:text-4xl text-center mb-6 font-medium pt-8 text-dGray uppercase"
+          >
+            The leader in interactive VR
+          </h2>
+          <p
+            class="font-normal text-center max-w-4xl text-vdGray text-md font-alata"
+          >
+            Founded in 2011, Loopstudios has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed businesses through
+            digital experiences that bind to their brand.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- product -->
+    <section id="product" class="pb-16">
+      <h1 class="text-3xl md:text-4xl  text-center lg:hidden mb-5 font-jo font-medium">
+        OUR CREATIONS
+      </h1>
+      <div class="container mx-auto">
+          <!-- mobile image -->
+        <div class="flex flex-wrap justify-center gap-7 lg:hidden">
+          <div
+            class="w-full px-5 relative text-white"
+          >
+            <img
+              src="./images/mobile/image-deep-earth.jpg"
+              alt=""
+              class="mx-auto brightness-50 hover:opacity-40 transition duration-150 ease-in-out"
+            />
+            <h1
+              class="font-jo text-2xl  bottom-1 left-9 md:left-20 absolute"
+            >
+              DEEP<br />EARTH
+            </h1>
+          </div>
+          <div
+            class="w-full px-5 relative text-white"
+          >
+            <img
+              src="./images/mobile/image-night-arcade.jpg"
+              alt=""
+              class="mx-auto brightness-50 hover:opacity-40 transition duration-150 ease-in-out"
+            />
+            <h1
+              class="font-jo text-2xl brightness-100 z-40  bottom-1 left-9 md:left-20 text-white absolute"
+            >
+              NIGHT<br />ARCADE
+            </h1>
+          </div>
+          <div
+            class="w-full px-5 relative text-white"
+          >
+            <img
+              src="./images/mobile/image-soccer-team.jpg"
+              alt=""
+              class="mx-auto brightness-50 hover:opacity-40 transition duration-150 ease-in-out"
+            />
+            <h1
+              class="font-jo text-2xl  bottom-1 left-9 md:left-20 text-white absolute"
+            >
+              SOCCER<br />TEAM VR
+            </h1>
+          </div>
+          <div
+            class="w-full px-5 relative text-white"
+          >
+            <img src="./images/mobile/image-grid.jpg" alt="" class="mx-auto brightness-50 hover:opacity-40 transition duration-150 ease-in-out" />
+            <h1
+              class="font-jo text-2xl  bottom-1 left-9 md:left-20 text-white absolute"
+            >
+              THE GRID
+            </h1>
+          </div>
+          <div
+            class="w-full px-5 relative text-white"
+          >
+            <img
+              src="./images/mobile/image-from-above.jpg"
+              alt=""
+              class="mx-auto brightness-50 hover:opacity-40 transition duration-150 ease-in-out"
+            />
+            <h1
+              class="font-jo text-2xl font-medium bottom-1 left-9 md:left-20 text-white absolute"
+            >
+              FROM UP<br />ABOVE VR
+            </h1>
+          </div>
+          <div
+            class="w-full px-5 relative text-white"
+          >
+            <img
+              src="./images/mobile/image-pocket-borealis.jpg"
+              alt=""
+              class="mx-auto brightness-50 hover:opacity-40 transition duration-150 ease-in-out"
+            />
+            <h1
+              class="font-jo text-2xl  bottom-1 left-9 md:left-20 text-white absolute"
+            >
+              POCKET<br />BOREALIS
+            </h1>
+          </div>
+          <div
+            class="w-full px-5 relative text-white"
+          >
+            <img
+              src="./images/mobile/image-curiosity.jpg"
+              alt=""
+              class="mx-auto brightness-50 hover:opacity-40 transition duration-150 ease-in-out"
+            />
+            <h1
+              class="font-jo text-2xl  bottom-1 left-9 md:left-20 text-white absolute"
+            >
+              THE<br />CURIOSITY
+            </h1>
+          </div>
+          <div
+            class="w-full px-5 relative text-white"
+          >
+            <img
+              src="./images/mobile/image-fisheye.jpg"
+              alt=""
+              class="mx-auto brightness-50 hover:opacity-40 transition duration-150 ease-in-out"
+            />
+            <h1
+              class="font-jo text-2xl  bottom-1 left-9 md:left-20 text-white absolute"
+            >
+              MAKE IT<br />FISHEYE
+            </h1>
+          </div>
+          <button class="inline-block w-32 text-center px-5 py-3 border-2 font-alata border-black text-black hover:bg-black hover:text-white font-semibold tracking-widest transition duration-150 ease-in-out text-md">
+          <a
+            href="#">SEE ALL</a
+          ></button>
+          
+        </div>
+          <!-- desktop image -->
+      <div class="hidden lg:flex justify-between mb-14">
+        <h1 class="text-4xl ml-16 text-center font-jo font-bold">
+          OUR CREATIONS
+        </h1>
+        <button class="inline-block w-32 text-center px-5 py-3 border-2 font-alata border-black text-black hover:bg-black mr-16 hover:text-white font-semibold tracking-widest transition duration-150 ease-in-out text-md">
+          <a
+            href="#">SEE ALL</a
+          ></button>
+          
+      </div> 
+      <div class="hidden flex-wrap justify-center lg:flex">
+        <div class="px-5 w-1/4 relative mb-7 text-white">
+      <img src="./images/desktop/image-deep-earth.jpg" alt="" class=" mx-auto hover:opacity-40 transition duration-150 ease-in-out">
+      <h1 class="font-jo text-2xl bottom-1 font-medium left-20 absolute">DEEP<br>EARTH </h1>
+        </div>
+        <div class=" px-5 w-1/4 relative mb-7 text-white">
+          <img src="./images/desktop/image-night-arcade.jpg" alt="" class=" mx-auto hover:opacity-40 transition duration-150 ease-in-out">
+          <h1 class="font-jo text-2xl bottom-1 font-medium left-20 text-white absolute">NIGHT<br>ARCADE </h1>
+        </div>
+        <div class=" px-5 w-1/4 relative mb-7 text-white">
+          <img src="./images/desktop/image-soccer-team.jpg" alt="" class=" mx-auto hover:opacity-40 transition duration-150 ease-in-out">
+          <h1 class="font-jo text-2xl bottom-1 font-medium left-20 text-white absolute">SOCCER<br>TEAM VR</h1>
+        </div>
+        <div class=" px-5 w-1/4 relative mb-7 text-white">
+          <img src="./images/desktop/image-grid.jpg" alt="" class=" mx-auto hover:opacity-40 transition duration-150 ease-in-out">
+          <h1 class="font-jo text-2xl bottom-1 font-medium left-20 text-white absolute">THE GRID</h1>
+        </div>
+        <div class=" px-5 w-1/4 relative text-white">
+          <img src="./images/desktop/image-from-above.jpg" alt="" class=" mx-auto hover:opacity-40 transition duration-150 ease-in-out">
+          <h1 class="font-jo text-2xl bottom-1 font-medium left-20 text-white absolute">FROM UP<br>ABOVE VR </h1>
+        </div>
+        <div class=" px-5 w-1/4 relative text-white">
+          <img src="./images/desktop/image-pocket-borealis.jpg" alt="" class="mx-auto hover:opacity-40 transition duration-150 ease-in-out">
+          <h1 class="font-jo text-2xl bottom-1 font-medium left-20 text-white absolute">POCKET<br>BOREALIS </h1>
+        </div>
+        <div class=" px-5 w-1/4 relative text-white">
+          <img src="./images/desktop/image-curiosity.jpg" alt="" class=" mx-auto hover:opacity-40 transition duration-150 ease-in-out">
+          <h1 class="font-jo text-2xl bottom-1 font-medium left-20 text-white absolute">THE<br>CURIOSITY</h1>
+        </div>
+        <div class=" px-5 w-1/4 relative text-white">
+          <img src="./images/desktop/image-fisheye.jpg" alt="" class=" mx-auto hover:opacity-40 transition duration-150 ease-in-out">
+          <h1 class="font-jo text-2xl bottom-1 font-medium left-20 text-white absolute">MAKE IT<br>FISHEYE</h1>
+        </div>
+        </div>
+    </section>
+    <footer class="bg-black py-16">
+      <section class="w-full flex flex-col gap-8 md:flex-row md:justify-center lg:justify-around">
+        <div class="md:w-5/12 lg:w-6/12 px-4">
+         <img src="./images/logo.svg" alt="" class="mx-auto lg:mx-0">
+         <ul class="text-white flex flex-col lg:flex-row flex-wrap gap-2 lg:gap-5 text-center lg:text-left pt-10">
+          <li class="font-alata font-medium text-lg hover:transform hover:-translate-y-2 transition ease-in duration-150"><a href="#">About</li>
+          <li class="font-alata font-medium text-lg hover:transform hover:-translate-y-2 transition ease-in duration-150"><a href="#">Carrers</li>
+          <li class="font-alata font-medium text-lg hover:transform hover:-translate-y-2 transition ease-in duration-150"><a href="#">Events</li>
+          <li class="font-alata font-medium text-lg hover:transform hover:-translate-y-2 transition ease-in duration-150"><a href="#">Products</li>
+          <li class="font-alata font-medium text-lg hover:transform hover:-translate-y-2 transition ease-in duration-150"><a href="#">Support</li>
+         </ul>
+        </div>
+     
+        
+  
+        <div class="px-4 items-center pt-6 flex gap-6 mb-6 justify-center md:flex-row">
+        <div class="hover:transform hover:-translate-y-2 hover:-rotate-6 transition ease-in duration-150">
+        <img src="./images/icon-facebook.svg" alt="">
+        </div>
+        <div class="hover:transform hover:-translate-y-2 hover:-rotate-6 transition ease-in duration-150">
+        <img src="./images/icon-twitter.svg" alt="">
+        </div>
+        <div class="hover:transform hover:-translate-y-2 hover:-rotate-6 transition ease-in duration-150">
+        <img src="./images/icon-pinterest.svg" alt="">
+        </div>
+        <div class="hover:transform hover:-translate-y-2 hover:-rotate-6 transition ease-in duration-150">
+        <img src="./images/icon-instagram.svg" alt="">
+        </div>
+        
+        </div>
+       
+        <h3 class="text-vdGray font-alata font-medium text-lg text-center">© 2021 Loopstudios. All rights reserved.</h3>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
